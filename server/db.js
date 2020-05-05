@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const db = new Sequelize('postgres://localhost/first-contact', {logging: false})
+const db = new Sequelize('postgres://postgres:w2w2@localhost/firstcontact', {logging: false})
 
 const Contact = db.define('contacts', {
   name: {
