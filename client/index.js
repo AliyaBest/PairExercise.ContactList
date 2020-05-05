@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import ContactList from './ContactList';
 
 const contacts = [
   { "id": 1, "name": "R2-D2", "phone": "222-222-2222", "email": "r2d2@droids.com" },
@@ -20,28 +21,8 @@ class Main extends Component {
         <div id='navbar'>
           <div>Contact List</div>
         </div>
-        
         <div id='container'>
-        <p>Inside func</p>
-          <table>
-            <tbody>
-              <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-              </tr>
-
-              {this.state.contacts.map(x => {
-                return (
-                  <tr>
-                    <td>x.name</td>
-                    <td>x.phone</td>
-                    <td>x.email</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+          <ContactList contacts={this.state.contacts} />
         </div>
       </div>
     )
